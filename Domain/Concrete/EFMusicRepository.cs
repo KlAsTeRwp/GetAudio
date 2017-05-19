@@ -9,7 +9,7 @@ using Domain.Entities;
 
 namespace Domain.Concrete
 {
-    class EFMusicRepository : IMusicRepository
+    public class EFMusicRepository : IMusicRepository
     {
         EFDbContext context = new EFDbContext();
 
