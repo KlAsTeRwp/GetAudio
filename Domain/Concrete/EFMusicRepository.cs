@@ -25,7 +25,10 @@ namespace Domain.Concrete
             if (file != null)
             {
                 if (file.MusicID == 0)
+                {
                     context.Musics.Add(file);
+                    context.SaveChanges();
+                }
                 else
                 {
                     Music dbEntry = context.Musics.FirstOrDefault(x => x.MusicID == file.MusicID);

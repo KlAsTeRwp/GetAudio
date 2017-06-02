@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Domain.Entities.Music>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@foreach (var item in Model)
+{
+    @Html.Partial("Get", item);
+}
+

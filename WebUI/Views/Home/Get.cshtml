@@ -1,0 +1,8 @@
+﻿@model Domain.Entities.Music
+
+<div class="list-group-item">
+    <div class="form-inline">
+        @Html.Raw(Model.Name)
+        @Html.Raw("<audio src=\" data:audio/mpeg;base64," + Convert.ToBase64String(Model.File) + "\" controls preload ='metadata' label='" + Model.Name + "\' ></audio>")
+    </div>
+</div>
